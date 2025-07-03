@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Premium SaaS Design System - Inspired by ClassMarker */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
+    /* Premium SaaS Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 13% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 13% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Premium Blue Primary */
+    --primary: 214 100% 50%;
+    --primary-light: 214 100% 96%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sophisticated Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 18%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted & Neutral Tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Success Green */
+    --success: 142 71% 45%;
+    --success-light: 142 76% 96%;
+    --success-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Warning Orange */
+    --warning: 38 92% 50%;
+    --warning-light: 48 100% 96%;
+    --warning-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Accent Colors */
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 13% 18%;
 
-    --radius: 0.5rem;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 214 100% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 50%), hsl(221 83% 53%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 13% 91%));
+    --gradient-hero: linear-gradient(135deg, hsl(214 100% 50%) 0%, hsl(221 83% 53%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 18% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 18% / 0.1), 0 2px 4px -1px hsl(220 13% 18% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 18% / 0.1), 0 4px 6px -2px hsl(220 13% 18% / 0.05);
+    --shadow-premium: 0 20px 25px -5px hsl(220 13% 18% / 0.1), 0 10px 10px -5px hsl(220 13% 18% / 0.04);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,49 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-premium {
+    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-ghost-premium {
+    @apply bg-white/50 border border-border text-foreground px-6 py-3 rounded-lg font-medium hover:bg-white/80 transition-all duration-300;
+  }
+
+  /* Card Variants */
+  .card-premium {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .card-elevated {
+    @apply bg-card border border-border rounded-xl p-6 shadow-lg hover:shadow-premium transition-all duration-500;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply flex items-center px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-200;
+  }
+
+  .nav-link-active {
+    @apply flex items-center px-4 py-3 text-primary bg-primary-light border-l-4 border-primary font-medium;
+  }
+
+  /* Form Styles */
+  .form-input-premium {
+    @apply w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200;
+  }
+
+  /* Animations */
+  .fade-in {
+    @apply animate-in fade-in duration-500;
+  }
+
+  .slide-in-from-right {
+    @apply animate-in slide-in-from-right duration-300;
   }
 }
