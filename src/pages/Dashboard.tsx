@@ -36,7 +36,7 @@ const Dashboard = () => {
           <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, {user?.name}!</p>
         </div>
-        <Button className="btn-premium">
+        <Button className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:shadow-lg transition-all px-6 py-2">
           <Plus className="w-4 h-4 mr-2" />
           Create New Test
         </Button>
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="card-premium">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -58,7 +58,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="card-premium">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -72,7 +72,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="card-premium">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -86,7 +86,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="card-premium">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -104,7 +104,7 @@ const Dashboard = () => {
       {/* Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Tests */}
-        <Card className="card-premium">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
           <CardHeader>
             <CardTitle>Recent Tests</CardTitle>
             <CardDescription>Your latest test activities</CardDescription>
@@ -134,7 +134,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Recent Activity */}
-        <Card className="card-premium">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
           <CardHeader>
             <CardTitle>Recent Activity</CardTitle>
             <CardDescription>Latest actions on your platform</CardDescription>

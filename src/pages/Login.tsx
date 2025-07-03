@@ -82,7 +82,7 @@ const Login = () => {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 form-input-premium"
+                    className="pl-10"
                     required
                   />
                 </div>
@@ -98,7 +98,7 @@ const Login = () => {
                     placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 form-input-premium"
+                    className="pl-10"
                     required
                   />
                 </div>
@@ -106,7 +106,7 @@ const Login = () => {
 
               <Button 
                 type="submit" 
-                className="w-full btn-premium" 
+                className="w-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:shadow-lg transition-all" 
                 disabled={isLoading}
               >
                 {isLoading ? (

@@ -128,49 +128,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
-  }
-}
-
-@layer components {
-  /* Premium Button Variants */
-  .btn-premium {
-    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105;
-  }
-
-  .btn-ghost-premium {
-    @apply bg-white/50 border border-border text-foreground px-6 py-3 rounded-lg font-medium hover:bg-white/80 transition-all duration-300;
-  }
-
-  /* Card Variants */
-  .card-premium {
-    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
-  }
-
-  .card-elevated {
-    @apply bg-card border border-border rounded-xl p-6 shadow-lg hover:shadow-premium transition-all duration-500;
-  }
-
-  /* Navigation Styles */
-  .nav-link {
-    @apply flex items-center px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-200;
-  }
-
-  .nav-link-active {
-    @apply flex items-center px-4 py-3 text-primary bg-primary-light border-l-4 border-primary font-medium;
-  }
-
-  /* Form Styles */
-  .form-input-premium {
-    @apply w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200;
-  }
-
-  /* Animations */
-  .fade-in {
-    @apply animate-in fade-in duration-500;
-  }
-
-  .slide-in-from-right {
-    @apply animate-in slide-in-from-right duration-300;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
 }
